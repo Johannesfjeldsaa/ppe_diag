@@ -1,0 +1,44 @@
+# Resources:
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+# https://packaging.python.org/en/latest/tutorials/packaging-projects/#choosing-build-backend
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ppe_diag"
+version = "0.1.0"
+authors = [
+  { name="Johannes Fjeldså"},
+]
+description = "Package for performing diagnostics on perturbed parameter ensembles (PPEs) from the Norwegian Earth System Model (NorESM)."
+readme = "README.md"
+requires-python = ">=3.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "cartopy==0.24.0",
+    "cmocean==4.0.3",
+    "h5netcdf==1.6.1",
+    "ipykernel==6.29.5",
+    "ipython==9.3.0",
+    "matplotlib==3.10.3",
+    "netcdf4==1.7.2",
+    "numpy==2.2.6",
+    "pandas==2.2.3",
+    "pint==0.24.4",
+    "pip==25.1.1",
+    "scikit-learn==1.6.1",
+    "scipy==1.15.2",
+    "xarray==2025.4.0",
+    "xclim==0.57.0",
+    "PyYAML==6.0.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/Johannesfjeldsaa/ppe_diag/"
+Issues = "https://github.com/Johannesfjeldsaa/ppe_diag/issues"
+
+[project.scripts]
+ppe_diag = "ppe_diag.scripts.main.main:main"
